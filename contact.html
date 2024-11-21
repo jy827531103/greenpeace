@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聯絡我們</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 1320px;
+            margin: auto;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+            background: #333;
+        }
+
+        .header ul li {
+            text-align: center;
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            list-style: none;
+        }
+
+        .header a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            background: #66a2b1;
+        }
+
+        .nav img {
+            width: 1320px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+
+        */ .accordtion {
+            /* border: 1px solid red; */
+            width: 800px;
+            float: left;
+        }
+
+        .accordtion label {
+            /* border: 1px solid red; */
+            padding: 5px 5px;
+            display: block;
+            width: 100%;
+            height: auto;
+            text-align: left;
+            border: radius 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            line-height: 2;
+            font-size: 20px;
+            /* border: 1px solid red; */
+            /* max-width: 600px; */
+        }
+
+        .content {
+            /* border: 1px solid red; */
+            height: auto;
+            background-color: rgb(178, 216, 228);
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        input[type=radio]:checked+.content {
+            background-color: rgb(156, 185, 199);
+        }
+
+        .content {
+            height: 0px;
+            background-color: #fff;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        input[ type=radio]:checked+.content {
+            height: 200px;
+        }
+
+        input[type=radio] {
+            display: none;
+        }
+
+        .item img {
+            width: 1320px;
+            /* border: 1px solid red; */
+
+        }
+
+        .item {
+            width: 1320px;
+            position: absolute;
+        }
+
+        .item .txt {
+            /* border: 1px solid red; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            height: 487px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .item:hover .txt {
+            opacity: 1;
+        }
+
+        .item .txt h2 {
+            /* border: 1px solid red; */
+            color: rgb(202, 202, 31);
+            font-size: 50px;
+
+        }
+
+        .item .txt h2::after {
+
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background-color: rgb(240, 237, 53);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            transition: width .5s;
+        }
+
+        .item:hover h2::after {
+            /* border: 1px solid red; */
+            width: 300px;
+
+        }
+
+        .item p {
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .footer {
+            padding-top: 10px;
+            height: 50px;
+            text-align: center;
+            background-color: #080707;
+            color: #fff;
+            
+        }
+        .footer p-bottom{
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul>
+                <li>
+                    <a href="./index.html">最新消息</a>
+                </li>
+                <li>
+                    <a href="./organization.html">世界組織</a>
+                </li>
+                <li>
+                    <a href="./yt.html">影片內容</a>
+                </li>
+                <li>
+                    <a href="./contact.html">聯絡我們</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="nav">
+            <img src="./images/p5.jpg" alt="">
+        </div>
+        <div class="accordtion">
+            <label for="tabl">捐款有優惠嗎?</label>
+            <div class="box">
+                <input type="radio" name="tab" id="tabl">
+                <div class="content">綠色和平每年向衛福部申請公開勸募許可證，並嚴格遵從公益勸募條例規範，我們將對每月定期定額捐款人與一次性捐款人，於每年報稅月前寄發上一年度「全年捐款總額證明」，收據可作為抵扣所得稅額使用，亦明列個人全年度捐款紀錄。</div>
+            </div>
+            <label for="tab2">為何每月捐款如此重要?</label>
+            <div class="box">
+                <input type="radio" name="tab" id="tab2">
+                <div class="content">您捐助的一分一毫，不論金額或形式，都代表對綠色和平環保專案的支持及信心，能協助我們在世界各地為環境成就更多。 為了維持公正和中立，綠色和平從不接受任何企業、政府或政黨的捐助，只接受民眾的直接捐款。因此，會員的定期定額捐款對環境工作尤其重要，能夠為綠色和平提供穩定的捐款收入，持續支援我們的環保專案發展，讓綠色和平推動環保的計畫與專案得以長遠實行。
+                    因為堅持，才有希望。會員穩定持續性的支持，就是連場環境硬仗的致勝關鍵。
+
+                </div>
+            </div>
+            <label for="tab3">何時會收到捐款收據呢?</label>
+            <div class="box">
+                <input type="radio" name="tab" id="tab3">
+                <div class="content">為了讓捐款者享受更便利、更有效率的服務，也為改善您收據保存、寄發遺失等問題，綠色和平將對每月定期定額捐款人與一次性捐款人，於每年報稅月前寄發上一年度「全年捐款總額證明」，收據可作為抵扣稅額使用，亦明列個人全年度捐款紀錄。
+                    自2022年起，綠色和平除了提供紙本收據，也逐步將收據轉為電子化，以Email寄送至捐款人的電子信箱，減少資源與環境成本。若您需要紙本收據，或是想要全面轉為電子化，歡迎來信至donor.services.tw@greenpeace.org或致電會員專線(02)2361-2025，將有專員為您註明。
+
+                </div>
+                <label for="tab4">我想了解使用信用卡的捐款方式</label>
+                <div class="box">
+                    <input type="radio" name="tab" id="tab4">
+                    <div class="content">信用卡捐款是綠色和平主要的捐款方式，它能提供安全、快速且準確的捐款環境，可以在短時間內得知每位熱心捐款人的交易狀態，也節省了大量的行政作業成本。</div>
+                </div>
+                <label for="tab5">綠色和平線上捐款</label>
+                <div class="box">
+                    <input type="radio" name="tab" id="tab5">
+                    <div class="content">為提供捐款者更方便、更安心的線上捐款環境，綠色和平採用高科技SSL加密技術的線上刷卡機制，可接受國內外各大銀行所發行之 VISA、JCB 及 MASTER 等信用卡。
+                        提醒您：信用卡捐款會即時進行。每月捐款會員的往後捐款，將於每月 2 日請款；若未能成功請款，有可能是系統或信用卡等出現問題，因此系統將自動重新嘗試，如有需要，會員服務部將會與您聯繫確認。每月捐款將在該信用卡效期到期後與獲發新卡後仍繼續有效，直至捐款人另行通知。
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./images/p4.jpg" alt="">
+            <div class="txt">
+                <h2>
+                    Donation
+                </h2>
+                <p>
+                    謝謝您的贊助!
+                </p>
+            </div>
+            <div class="footer">
+                <div>
+                    <p-bottom>&copy; Green peace volunteer. All Rights Reserved.</p>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>
